@@ -1,4 +1,5 @@
 {
+    "type": "matrix",
     "mxid": "@botname:servername",
     "server": "https://servername",
     "password": "my-voice-is-my-password",

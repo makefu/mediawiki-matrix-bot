@@ -1,0 +1,9 @@
+{
+    "type": "signal",
+    "signal_api_url": "http://localhost:8080",
+    "signal_source_number": "+1234567890",
+    "signal_target_group": "group.XXXXXXXXXXXXXXXXXXXX",
+    "baseurl": "https://mediawiki.example",
+    "api_path": "/api.php",
+    "timeout": 60
+}
