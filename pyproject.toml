@@ -1,0 +1,61 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mediawiki-matrix-bot"
+version = "1.2.0"
+description = "Matrix bot that publishes mediawiki recent changes"
+readme = "README.md"
+license = "MIT"
+authors = [
+    { name = "makefu", email = "github@syntax-fehler.de" }
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Console",
+    "Topic :: Utilities",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3.6",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+]
+requires-python = ">=3.6"
+dependencies = [
+    "matrix-nio",
+    "docopt",
+    "aiohttp",
+]
+
+[project.optional-dependencies]
+dev = ["mypy"]
+
+[project.urls]
+Homepage = "https://github.com/nix-community/mediawiki-matrix-bot"
+Repository = "https://github.com/nix-community/mediawiki-matrix-bot"
+
+[project.scripts]
+mediawiki-matrix-bot = "mediawiki_matrix_bot:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+
+[tool.mypy]
+warn_redundant_casts = true
+disallow_untyped_calls = true
+disallow_untyped_defs = true
+no_implicit_optional = true
+
+[[tool.mypy.overrides]]
+module = [
+    "setuptools.*",
+    "aiohttp.*",
+    "docopt.*",
+    "nio.*",
+]
+ignore_missing_imports = true

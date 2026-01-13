@@ -17,7 +17,7 @@
         in {
           mediawiki_matrix_bot = pkgs.python3Packages.buildPythonApplication {
             pname = "mediawiki-matrix-bot";
-            version = "1.1.0";
+            version = "1.2.0";
             src = ./.;
             pyproject = true;
             build-system = [ pkgs.python3Packages.setuptools ];
